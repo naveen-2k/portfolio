@@ -21,24 +21,24 @@ const carouselText = [
         }
     });
 
-    var currentPage = window.location.pathname;
+    // var currentPage = window.location.pathname;
 
-    // Function to check window size and redirect if needed
-    function checkWindowSize() {
-        var width = $(window).width();
-        var targetPage;
+    // // Function to check window size and redirect if needed
+    // function checkWindowSize() {
+    //     var width = $(window).width();
+    //     var targetPage;
 
-        if (width > 1350) {
-            targetPage = 'resume1.html';
-        } else {
-            targetPage = 'resume.html';
-        }
+    //     if (width > 1350) {
+    //         targetPage = 'resume1.html';
+    //     } else {
+    //         targetPage = 'resume.html';
+    //     }
 
-        // Redirect only if the current page is not the target page
-        if (currentPage !== '/' + targetPage) {
-            window.location.href = targetPage;
-        }
-    }
+    //     // Redirect only if the current page is not the target page
+    //     if (currentPage !== '/' + targetPage) {
+    //         window.location.href = targetPage;
+    //     }
+    // }
 
     // Initial check on page load
     // checkWindowSize();
