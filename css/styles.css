@@ -740,6 +740,19 @@ progress {
     max-width: 1320px;
   }
 }
+.grid-cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
 .row {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
@@ -2103,11 +2116,20 @@ progress {
   height: 1.5em;
 }
 .form-control::-moz-placeholder {
-  color: #6c757d;
+  color: #0a670f !important;
   opacity: 1;
 }
 .form-control::placeholder {
-  color: #6c757d;
+  color: #036408 !important;
+  opacity: 1;
+}
+.form-control:-ms-input-placeholder {
+  color: #036408 !important; /* Desired color for IE10-11 */
+  opacity: 1;
+}
+
+.form-control::-ms-input-placeholder {
+  color: #036408 !important; /* Desired color for Edge */
   opacity: 1;
 }
 .form-control:disabled {
@@ -3331,14 +3353,14 @@ fieldset:disabled .btn {
   --bs-btn-border-color: #06370d;
   --bs-btn-hover-color: #fff;
   --bs-btn-hover-bg: #063f05;
-  --bs-btn-hover-border-color: #1826c2;
+  --bs-btn-hover-border-color: #36fd05;
   --bs-btn-focus-shadow-rgb: 64, 79, 245;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #1826c2;
-  --bs-btn-active-border-color: #1724b6;
+  --bs-btn-active-bg: #36fd05;
+  --bs-btn-active-border-color: #36fd05;
   --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #1e30f3;
-  --bs-btn-disabled-border-color: #1e30f3;
+  --bs-btn-disabled-bg:#36fd05;
+  --bs-btn-disabled-border-color: #36fd05;
 }
 
 /* Secondary Button */
@@ -12148,6 +12170,30 @@ html {
   fill: rgb(3, 80, 17);
 }
 
+.profile .dots-1,
+.profile .dots-2,
+.profile .dots-3,
+.profile .dots-4 {
+    opacity: 0; /* Initially hidden */
+}
+
+.profile .dots-1 {
+    right: -10vw; /* Position off-screen to the right */
+}
+
+.profile .dots-2 {
+    right: -10vw; /* Position off-screen to the right */
+}
+
+.profile .dots-3 {
+    left: -10vw; /* Position off-screen to the left */
+}
+
+.profile .dots-4 {
+    left: -10vw; /* Position off-screen to the left */
+}
+
+
 @media (min-width: 576px) {
   .profile {
     height: 60vw;
@@ -12248,6 +12294,8 @@ html {
     left: -2vw;
   }
 }
+
+
 
 .typing-container {
   display: flex;
